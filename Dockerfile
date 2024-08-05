@@ -17,7 +17,7 @@ WORKDIR /app
 
 # Change working directory to the cloned repository
 WORKDIR /app/spring-petclinic-docker
-
+RUN chmod +x mvnw
 # Build the Spring Petclinic application using Maven
 RUN ./mvnw package
 
