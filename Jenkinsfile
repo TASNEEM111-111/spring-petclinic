@@ -4,7 +4,7 @@ pipeline {
     stages {
          stage('Preparation') {
             steps {
-             git 'https://github.com/TASNEEM111-111/spring-petclinic.git '
+             git 'https://github.com/TASNEEM111-111/spring-petclinic.git ',branch: 'main'
             }
     }
         stage('Clean Workspace') {
