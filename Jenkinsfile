@@ -4,7 +4,7 @@ pipeline {
     stages {
          stage('Preparation') {
             steps {
-             git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+             git 'https://github.com/TASNEEM111-111/spring-petclinic.git'
             }
     }
         stage('Clean Workspace') {
