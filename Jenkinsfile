@@ -7,11 +7,7 @@ pipeline {
               checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url:'https://github.com/TASNEEM111-111/spring-petclinic.git']]])
             }
         }
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()
-            }
-        }
+        
         stage('Build Docker Image') {
             steps {
                 script {
