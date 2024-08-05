@@ -1,4 +1,3 @@
-
 FROM ubuntu:latest
 
 # Set environment variables to avoid interactive prompts during package installation
@@ -17,7 +16,7 @@ WORKDIR /app
 
 # Change working directory to the cloned repository
 WORKDIR /app/spring-petclinic-docker
-RUN chmod +x mvnw
+
 # Build the Spring Petclinic application using Maven
 RUN ./mvnw package
 
@@ -25,4 +24,4 @@ RUN ./mvnw package
 EXPOSE 8080
 
 # Run the Spring Petclinic application
-CMD ["java", "-jar", "target/spring-petclinic
+CMD ["java", "-jar", "target/spring-petclinic-2.7.0-SNAPSHOT.jar"]
