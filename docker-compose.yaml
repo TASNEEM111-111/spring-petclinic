@@ -1,4 +1,3 @@
-
 version: '3.8'
 services:
   spring-petclinic:
@@ -22,8 +21,8 @@ services:
   mysql:
     image: mysql:8.0
     ports:
-      - "3306"
-environment:
+      - "3306:3306"
+    environment:
       - MYSQL_ROOT_PASSWORD=
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
       - MYSQL_USER=petclinic
@@ -43,3 +42,4 @@ environment:
 
 volumes:
   mysql_data:
+
