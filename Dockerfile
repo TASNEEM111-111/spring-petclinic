@@ -12,10 +12,12 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Clone the Spring Petclinic repository
-#RUN git clone https://github.com/dockersamples/spring-petclinic-docker.git
+RUN git clone https://github.com/dockersamples/spring-petclinic-docker.git
 
 # Change working directory to the cloned repository
 WORKDIR /app/spring-petclinic-docker
+# Make sure mvnw is executable
+RUN chmod +x mvnw
 
 # Build the Spring Petclinic application using Maven
 RUN ./mvnw package
