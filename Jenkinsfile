@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-         stage('Preparation') {
+        stage('Preparation') {
             steps {
-             git 'https://github.com/TASNEEM111-111/spring-petclinic.git ',branch: 'main'
+                git url: 'https://github.com/Mohamedzonkol/Jenkins-Pipeline.git', branch: 'main'
             }
-    }
+        } 
         stage('Clean Workspace') {
             steps {
                 deleteDir()
