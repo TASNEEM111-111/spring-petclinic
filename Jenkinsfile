@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('petclinic-app', '.')  
+                 sh 'docker build -t petclinic-app .'     
                 }
             }
         }
