@@ -23,7 +23,7 @@ RUN chmod +x mvnw
 RUN ./mvnw package
 
 # Expose the port on which the app runs
-EXPOSE 8080
+EXPOSE 8082
 
 # Run the Spring Petclinic application
 CMD ["java", "-jar", "target/spring-petclinic-2.7.0-SNAPSHOT.jar"]
