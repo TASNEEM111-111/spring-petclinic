@@ -27,6 +27,7 @@ pipeline {
 
     post {
         always {
+            echo "aa"
            
         }
     }
